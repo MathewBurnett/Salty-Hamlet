@@ -42,4 +42,11 @@ class KillData():
 
 	def __mapShipType__(imageName):
 		return "Frieghter"
-	
+
+	def serialize(self):
+		return {
+		"name": self.name,
+		"date": self.date,
+		"amount": self.amount,
+		"link": self.link
+		}

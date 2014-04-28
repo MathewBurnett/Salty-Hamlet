@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, jsonify
 import parseBurn
 
 app = Flask(__name__)
@@ -15,4 +15,4 @@ def goodbye():
 
 @app.route('/burn')
 def burn():
-	return parseBurn.parseBurn('http://isjitaburning.com/kills.php')
+	return jsonify(result=[obj.serialize() for obj in parseBurn.parseBurn('http://isjitaburning.com/kills.php')])
