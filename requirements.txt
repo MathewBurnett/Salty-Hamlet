@@ -6,3 +6,5 @@ gunicorn==18.0
 itsdangerous==0.23
 newrelic==2.14.0.11
 wsgiref==0.1.2
+nose==1.3.0
+BeautifulSoup==3.2.1
